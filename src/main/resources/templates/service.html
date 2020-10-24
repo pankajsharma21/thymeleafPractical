@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Services Page</title>
+</head>
+<body>
+<h1>this are the service provider by PAnkaj</h1>
+<!-- Going to bring footer here because we declare footer fragment and we use this 3 way view source code or vide for difference b/w this 3 -->
+<!-- dyanmic value give to footer -->
+<footer id="hostTag1" th:replace="footer::footer1('this is title','this is sub')"></footer>
+<!-- dynamic value from controller -->
+<footer id="hostTag4" th:replace="footer::footer1(${title},${subtitle})"></footer>
+
+<!-- 
+<!--uncomment this and the pass the paramatere to run otherwise show error  -->
+<footer id="hostTag2" th:insert="footer::footer1"></footer>
+<footer id="hostTag3" th:include ="footer::footer1"></footer>
+
+ -->
+</body>
+</html>

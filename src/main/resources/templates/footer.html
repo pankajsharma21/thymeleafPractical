@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Footer Template</title>
+</head>
+<body>
+<!--  by using th:fragment="name" we use this in another pages like we use this in service page -->
+	<footer id="fragmentTag" th:fragment="footer1(title,substitle)">  
+	<div class="container">
+	
+	<h1 th:text="${title}"></h1>
+	<h2 th:text="${substitle}"></h2>
+	<h1>About Pankaj</h1>
+	<h1>Learning theamleaf</h1>
+	<h1>feel free to contct</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eaque.</p>
+	
+	</div>
+	</footer>
+</body>
+</html>

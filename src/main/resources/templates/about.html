@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>about learn emmet "html:5" then press tab</h1>
+    <h1>we are learning thyemleaf</h1>
+   
+   <!--  predefind object ki property use krne k liye # use krege like property of array ,String etc. -->
+   
+    <h1 th:text="${ #strings.toUpperCase(name) }"></h1>
+    <p>length of name is <span th:text="${#strings.length(name)}"></span></p>
+    <h2 th:text="${currentDate}"></h2>
+    <h2>My Name is <span th:text="${name}"></span></h2>
+    
+   <!--  hume is me variable bana skte hai but div ander wale variable div k bhar null value show krege -->
+    <div th:with="a=5,b=67,n=${name}">
+    <h1>Value of a is <span th:text="${a}"></span></h1>
+    <h1 th:text="'Value of b is '+${b}"></h1>
+    <h1>Local value of n is <span th:text="${n}"></span></h1>
+    <h2 th:text="'sum of'+${a}+'and'+${b}+'is'+${a+b}"></h2>
+    </div>
+    
+ <!--   null value show krega kuki div k bhar hai yeh or variable div k ander banaya hua hai --> 
+    <h1>Local value of n is <span th:text="${n}"></span></h1> 
+    
+   
+</body>
+</html>
